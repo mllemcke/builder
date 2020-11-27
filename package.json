@@ -1,0 +1,23 @@
+{
+  "name": "bumbywoolbuilder",
+  "version": "1.0.0",
+  "description": "Custom Wool Clothing Visualizer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bumby-Wool/builder.git"
+  },
+  "author": "cblackw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bumby-Wool/builder/issues"
+  },
+  "homepage": "https://github.com/Bumby-Wool/builder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
