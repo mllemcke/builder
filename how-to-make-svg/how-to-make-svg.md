@@ -26,4 +26,30 @@ In `example2.html` you can see that we have the same SVG but now with two polygo
 </svg>
 ```
 This is how in the Bumby Builder we can show clothing items with different colored sections. To make an SVG that draws a sweater you could use one polygon with all the points to draw the sweater's shape; however, for the Bumby Builder any section of a sweater which the customer can choose a color for has to be its own polygon.
-> In the finished SVGs the strokes of polygon also show a more realistic image of the sweater as they represent some of the seams.
+> In the finished SVGs the strokes of polygon also show a more realistic image of the sweater as they represent some of the seams in the clothing.
+
+## Example 3 - Tips for making SVGs for the Bumby Builder
+The `example3.html` file shows a full example of what an sweater SVG might be like. The following sections contain tips on how to construct a SVG for use in the Bumby Builder.
+
+### Picking Points Over an Existing Image
+One way to make drawing the sections easier by tracing an existing image. On line 23 of the `example3.html` file you can see an example image that is commented out. Replace that line with the line below to see what this can look like.
+```
+<img src="Cardi.jpg" width="375" style="position:absolute;z-index: -9999;" />
+```
+Now you can the image shows up behind the SVG which is an effective way to help you find the right points to use for the different sections
+
+### Strokes
+With the finished SVG you'll want the strokes to appear as clothing seams by using the following style attribute on the polygon.
+```
+style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;"
+```
+That style looks nice but isn't very helpful while you are trying to create the SVG so I recommend using a much clearer stroke like the following while you are creating the SVG. Once you have the strokes and fills working the way you want switch them to the one above for the finished look.
+```
+style="stroke:purple;stroke-width:3;"
+```
+
+* using darkening to create shadow areas
+* optional sections
+
+## Using the SVG Template file
+* use of template page

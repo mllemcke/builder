@@ -1,0 +1,142 @@
+<html ng-app="myApp">
+
+<head>
+    <style>
+        svg .blue {
+            fill: blue;
+        }
+
+        svg .red {
+            fill: red;
+        }
+
+        svg .green {
+            fill: green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="myCtrl">
+    <h1>Bumby Builder SVG Template</h1>
+    <!-- <img src="myTracingImage.jpg" width="375" style="position:absolute;z-index: -9999;" /> -->
+    <div style="display: flex; flex-direction: row;">
+        <svg viewBox="0 0 375 500" style="width:375px;">
+            <!-- ADD POLYGONS HERE -->
+        </svg>
+        <div>
+            <div>
+                <h3>Main Color Options</h3>
+                <div>
+                    <label>Color Option 1</label>
+                    <select ng-options="color as color.name for color in colors"
+                    ng-model="selectedOptions.colorOption1"></select>
+                </div>
+                <div>
+                    <label>Color Option 2</label>
+                    <select ng-options="color as color.name for color in colors"
+                    ng-model="selectedOptions.colorOption2"></select>
+                </div>
+                <div>
+                    <label>Color Option 3</label>
+                    <select ng-options="color as color.name for color in colors"
+                    ng-model="selectedOptions.colorOption3"></select>
+                </div>
+                <div>
+                    <label>Color Option 4</label>
+                    <select ng-options="color as color.name for color in colors"
+                    ng-model="selectedOptions.colorOption4"></select>
+                </div>
+                <div>
+                    <label>Color Option 5</label>
+                    <select ng-options="color as color.name for color in colors"
+                    ng-model="selectedOptions.colorOption5"></select>
+                </div>
+                
+                    <!-- EXTRA OPTIONS -->
+                <h3>Additional Options</h3>
+                <label><input type="checkbox" ng-model="selectedOptions.extras.option1.show"> Add Option 1</label>
+                <div ng-if="selectedOptions.extras.option1.show">
+                    <label>Sleeve Cuffs</label>
+                    <select ng-options="color as color.name for color in colors"
+                        ng-model="selectedOptions.extras.option1.color"></select>
+                </div>
+                <label><input type="checkbox" ng-model="selectedOptions.extras.option2.show"> Add Option 2</label>
+                <div ng-if="selectedOptions.extras.option2.show">
+                    <label>Bottom Cuff</label>
+                    <select ng-options="color as color.name for color in colors"
+                        ng-model="selectedOptions.extras.option2.color"></select>
+                </div>
+                <label><input type="checkbox" ng-model="selectedOptions.extras.option3.show"> Add Option 3</label>
+                <div ng-if="selectedOptions.extras.option3.show">
+                    <label>Pocket</label>
+                    <select ng-options="color as color.name for color in colors"
+                        ng-model="selectedOptions.extras.option3.color"></select>
+                </div>
+                <label><input type="checkbox" ng-model="selectedOptions.extras.option4.show"> Add Option 5</label>
+                <div ng-if="selectedOptions.extras.option4.show">
+                    <label>Pocket</label>
+                    <select ng-options="color as color.name for color in colors"
+                        ng-model="selectedOptions.extras.option4.color"></select>
+                </div>
+                <label><input type="checkbox" ng-model="selectedOptions.extras.option5.show"> Add Option 5</label>
+                <div ng-if="selectedOptions.extras.option5.show">
+                    <label>Pocket</label>
+                    <select ng-options="color as color.name for color in colors"
+                        ng-model="selectedOptions.extras.option5.color"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        angular.module('myApp', [])
+            .controller('myCtrl', ['$scope', function ($scope) {
+                $scope.colors = [
+                    {
+                        name: 'blue',
+                        patternId: 'blue'
+                    },
+                    {
+                        name: 'red',
+                        patternId: 'red'
+                    },
+                    {
+                        name: 'green',
+                        patternId: 'green'
+                    }
+                ];
+                var defaultColor = $scope.colors[0];
+                $scope.selectedOptions = {
+                    'colorOption1': defaultColor,
+                    'colorOption2': defaultColor,
+                    'colorOption3': defaultColor,
+                    'colorOption4': defaultColor,
+                    'colorOption5': defaultColor,
+                    'extras': {
+                        'option1': {
+                            'show': false,
+                            'color': defaultColor
+                        },
+                        'option2': {
+                            'show': false,
+                            'color': defaultColor
+                        },
+                        'option3': {
+                            'show': false,
+                            'color': defaultColor
+                        },
+                        'option4': {
+                            'show': false,
+                            'color': defaultColor
+                        },
+                        'option5': {
+                            'show': false,
+                            'color': defaultColor
+                        }
+                    }
+                };
+            }]);
+    </script>
+</body>
+
+</html>
