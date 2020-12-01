@@ -90,6 +90,25 @@ The main thing to know is that if there are optional features of an item you can
 In the next section about using the SVG template we'll see a little more about the use of these extra options.
 
 ## Using the SVG Template file
-* use of template page
+The `svg-template.html` file is designed to help you build the SVGs for the Bumby Builder. 
+### Make a copy
+Start by copying the file and rename it for the specific item you are making
 
+### Start Drawing
+Next start to modify it by adding polygons at **line 25** after where it says `<!-- ADD POLYGONS HERE -->`. 
+If you want to use a tracing image put it in the same folder as the svg-template file you created and the modify **line 22** by uncommenting it (remove the `<!-- -->`) and changing the `src="myTracingImage.jpg"` to match the name of your image.
+
+### Adding Configurable Colors
+Add `ng-class="selectedOptions.colorOption1.patternId"` to your polygons To get a better idea of how the polygons will look with configurable colors you can add them to your polygons.
+**Before**
+```
+<polygon id="square" points="10,10 365,10 365,490 10,490" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;"></polygon>
+```
+**After**
+```
+<polygon id="square" points="10,10 365,10 365,490 10,490" 
+    ng-class="selectedOptions.colorOption1.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;"></polygon>
+```
+
+### Adding Optional Features
 > **Note:** you can tie the same option to multiple polygon elements
