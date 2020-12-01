@@ -29,7 +29,7 @@ This is how in the Bumby Builder we can show clothing items with different color
 > In the finished SVGs the strokes of polygon also show a more realistic image of the sweater as they represent some of the seams in the clothing.
 
 ## Example 3 - Tips for making SVGs for the Bumby Builder
-The `example3.html` file shows a full example of what an sweater SVG might be like. The following sections contain tips on how to construct a SVG for use in the Bumby Builder.
+The `example3.html` file shows a full example of what a sweater SVG might be like. The following sections contain tips on specific parts of `example3.html` for how to construct an SVG for use in the Bumby Builder.
 
 ### Picking Points Over an Existing Image
 One way to make drawing the sections easier by tracing an existing image. On line 23 of the `example3.html` file you can see an example image that is commented out. Replace that line with the line below to see what this can look like.
@@ -48,8 +48,48 @@ That style looks nice but isn't very helpful while you are trying to create the 
 style="stroke:purple;stroke-width:3;"
 ```
 
-* using darkening to create shadow areas
-* optional sections
+### Shadows for added realism
+In example 3 I created a darkened portion of the hood to create the illusion of shadow.
+These lines are 71-76 in `example3.html` showing the inner hood section
+```
+<polygon id="innerHood" points="85,138 95,115 125,110 180,115 235,105 268,110 185,145 175,160 158,142"
+    ng-class="selectedOptions.hoodColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+<polygon id="innerHoodDarkener" points="85,138 95,115 125,110 180,115 235,105 268,110 185,145 175,160 158,142"
+    style="fill:rgba(0,0,0,0.3);" />
+```
+Both of these polygons use the exact same points. The first polygon is set to the same color as the rest of the hood. The second polygon is set to a semi-transparent black to create the darkened effect.
+> The order here matters, the second polygon is drawn on top of the first
+
+### Additional Clothing Options
+For clothing that has optional features such as sleeve cuffs or different necklines you won't need to create separate SVGs for each option. Instead you we can hide and show the polygons based on the user's choices. Let's take a look at the sleeve cuffs option for in `example3.html`
+
+Here is one of the sleeve cuff polygons
+
+**Lines 44-46**
+```
+<polygon id="leftCuff" points="8,385 50,385 45,420 8,420" ng-if="selectedOptions.extras.option1.show"
+    ng-class="selectedOptions.extras.option1.color.patternId"
+    style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+```
+The `ng-if` attribute of the polygon determines whether it is shown or hidden. 
+
+> Attributes like `ng-if` are part of the [angular js](https://docs.angularjs.org/tutorial) framework. You don't really need to understand angular js to build these SVGs
+
+If `selectedOptions.extras.option1.show` is set to `true` the polygon is shown. If it is set to `false` then it isn't. 
+
+The value `true` or `false` comes from the input element below. If the checkbox is checked then the value is `true` otherwise it is `false`.
+
+**Line 112**
+```
+<label><input type="checkbox" ng-model="selectedOptions.extras.option1.show"> Add cuffs</label>
+```
+> Like the shadow effect, order here matters. make sure to place the polygon below other polygons that it needs to be placed over top of
+
+The main thing to know is that if there are optional features of an item you can hide or show the polygons by tying them to one of the extras options by adding `ng-if="selectedOptions.extras.option1.show"` to the polygon element.
+
+In the next section about using the SVG template we'll see a little more about the use of these extra options.
 
 ## Using the SVG Template file
 * use of template page
+
+> **Note:** you can tie the same option to multiple polygon elements
