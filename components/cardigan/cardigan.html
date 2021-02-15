@@ -1,0 +1,61 @@
+<div style="display: flex; flex-direction: row;">
+  <cardigan-svg selected-options="selectedOptions"></cardigan-svg>
+  <div>
+      <div>
+          <h3>Main Color Options</h3>
+          <div>
+              <label>Color Option 1</label>
+              <color-selector on-update="selectedOptions.colorOption1 = color"></color-selector>
+          </div>
+          <div>
+              <label>Color Option 2</label>
+              <color-selector on-update="selectedOptions.colorOption2 = color"></color-selector>
+          </div>
+          <div>
+              <label>Color Option 3</label>
+              <color-selector on-update="selectedOptions.colorOption3 = color"></color-selector>
+          </div>
+          <div>
+              <label>Color Option 4</label>
+              <color-selector on-update="selectedOptions.colorOption4 = color"></color-selector>
+          </div>
+          <div>
+              <label>Color Option 5</label>
+              <color-selector on-update="selectedOptions.colorOption5 = color"></color-selector>
+          </div>
+          
+              <!-- EXTRA OPTIONS -->
+          <h3>Additional Options</h3>
+          <label><input type="checkbox" ng-model="selectedOptions.extras.option1.show"> Add Option 1</label>
+          <div ng-if="selectedOptions.extras.option1.show">
+              <label>Option 1 Color</label>
+              <select ng-options="color as color.name for color in colors"
+                  ng-model="selectedOptions.extras.option1.color"></select>
+          </div>
+          <label><input type="checkbox" ng-model="selectedOptions.extras.option2.show"> Add Option 2</label>
+          <div ng-if="selectedOptions.extras.option2.show">
+              <label>Option 2 Color</label>
+              <select ng-options="color as color.name for color in colors"
+                  ng-model="selectedOptions.extras.option2.color"></select>
+          </div>
+          <label><input type="checkbox" ng-model="selectedOptions.extras.option3.show"> Add Option 3</label>
+          <div ng-if="selectedOptions.extras.option3.show">
+              <label>Option 3 Color</label>
+              <select ng-options="color as color.name for color in colors"
+                  ng-model="selectedOptions.extras.option3.color"></select>
+          </div>
+          <label><input type="checkbox" ng-model="selectedOptions.extras.option4.show"> Add Option 4</label>
+          <div ng-if="selectedOptions.extras.option4.show">
+              <label>Option 4 Color</label>
+              <select ng-options="color as color.name for color in colors"
+                  ng-model="selectedOptions.extras.option4.color"></select>
+          </div>
+          <label><input type="checkbox" ng-model="selectedOptions.extras.option5.show"> Add Option 5</label>
+          <div ng-if="selectedOptions.extras.option5.show">
+              <label>Option 5 Color</label>
+              <select ng-options="color as color.name for color in colors"
+                  ng-model="selectedOptions.extras.option5.color"></select>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<select 
+    ng-options="color as color.name for color in $ctrl.colors"
+    ng-model="$ctrl.selectedColor"
+    ng-change="$ctrl.setColor()">
+</select>

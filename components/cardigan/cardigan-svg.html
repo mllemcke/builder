@@ -1,0 +1,51 @@
+<svg width="375" height="500" style="width:375px;">
+    <!-- Right and left are from viewer's perspective -->
+      <polygon id="leftSleeve" points="8,250 40,200 105,145 125,155 65,290 45,420 8,420"
+      ng-class="selectedOptions.sleeves.leftColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="rightSleeve" points="220,168 238,152 290,210 359,380 359,430 335,440 275,310 270,270"
+      ng-class="selectedOptions.sleeves.rightColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+    
+      <polygon id="rightFrontPanel" points="185,172 220,168 270,270 295,470 190,490"
+      ng-if="!selectedOptions.pocket.show" ng-class="selectedOptions.colorOption1.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="leftFrontPanel" points="65,290 125,155 155,170 160,490 50,495"
+      ng-if="!selectedOptions.pocket.show" ng-class="selectedOptions.body.leftPanelColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="centerTrimNoPocket" points="155,170 185,172 190,490 160,490"
+      ng-if="!selectedOptions.pocket.show" ng-class="selectedOptions.body.centerTrimColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      
+      <polygon id="rightFrontPanelPocket" points="185,172 220,168 270,270 295,330 190,330"
+      ng-if="selectedOptions.pocket.show" ng-class="selectedOptions.body.rightPanelColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="leftFrontPanelPocket" points="65,290 125,155 155,170 160,330 50,330"
+      ng-if="selectedOptions.pocket.show" ng-class="selectedOptions.body.leftPanelColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="centerTrimPocket" points="155,170 185,172 190,330 155,330"
+      ng-if="selectedOptions.pocket.show" ng-class="selectedOptions.body.centerTrimColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="centerPanel" points="50,330 295,330 295,470 190,490 160,490 50,495"
+      ng-if="selectedOptions.pocket.show" ng-class="selectedOptions.pocket.backgroundColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+    
+      <!-- CUFFS -->
+      <polygon id="leftCuff" points="8,385 50,385 45,420 8,420"
+      ng-if="selectedOptions.sleeves.cuffs.show" ng-class="selectedOptions.sleeves.cuffs.color.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="rightCuff" points="315,405 359,390 359,430 335,440"
+      ng-if="selectedOptions.sleeves.cuffs.show" ng-class="selectedOptions.sleeves.cuffs.color.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="bottomCuff" points="50,475 160,470 190,470 295,450 295,470 190,490 160,490 50,495"
+      ng-if="selectedOptions.body.bottomCuff.show" ng-class="selectedOptions.body.bottomCuff.color.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      
+      <!-- HOOD -->
+      <polygon id="outerhoodbottomleft" points="185,172 158,142 85,138 105,145 125,155 125,155 155,170"
+      ng-class="selectedOptions.hoodColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="outerhoodbottomRight" points="175,160 185,145 268,110 260,120 250,130 220,140 238,152 220,168 185,172"
+      ng-class="selectedOptions.hoodColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="outerhoodtopLeft" points="85,138 95,80 112,40 125,110 95,115"
+      ng-class="selectedOptions.hoodColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="outerhoodtopCenter" points="112,40 210,35 235,105 180,115 125,110"
+      ng-class="selectedOptions.hoodColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="outerhoodtopRight" points="210,35 250,75 268,110 235,105"
+      ng-class="selectedOptions.hoodColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="innerHood" points="85,138 95,115 125,110 180,115 235,105 268,110 185,145 175,160 158,142"
+      ng-class="selectedOptions.hoodColor.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+      <polygon id="innerHoodDarkener" points="85,138 95,115 125,110 180,115 235,105 268,110 185,145 175,160 158,142"
+      style="fill:rgba(0,0,0,0.3);" />
+
+      <!-- POCKET -->
+      <polygon id="pocket" points="70,455 70,395 120,355 225,345 275,385 275,435 190,450 160,450"
+      ng-if="selectedOptions.pocket.show" ng-class="selectedOptions.pocket.color.patternId" style="stroke:#000;stroke-width:2;stroke-opacity: 0.3;" />
+  </svg>

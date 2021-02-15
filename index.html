@@ -1,1 +1,29 @@
-<h1>hello world</h1>
+<html ng-app="bumbyApp">
+
+<head>
+    <style>
+        svg .blue {
+            fill: blue;
+        }
+
+        svg .red {
+            fill: red;
+        }
+
+        svg .green {
+            fill: green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+    <h1>Bumby Builder SVG Template</h1>
+    <!-- <img src="myTracingImage.jpg" width="375" style="position:absolute;z-index: -9999;" /> -->
+    <ng-view></ng-view>
+    <script src="index.js"></script>
+    <script src="components/cardigan/cardigan.js"></script>
+    <script src="components/color-selector/colorselector.js"></script>
+</body>
+
+</html>
