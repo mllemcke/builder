@@ -2,7 +2,13 @@ angular.module('bumbyApp')
     .component('cardiganSvg', {
         templateUrl: 'components/cardigan/cardigan-svg.html',
         bindings: {
-            selectedOptions: '<'
+            selectedOptions: '='
+        },
+        controller: function () {
+            var ctrl = this;
+            ctrl.$onChanges = function(currentValue) {
+                ctrl.selectedOptions = currentValue;
+            }
         }
     })
     .component('cardigan', {
