@@ -1,5 +1,26 @@
-<select 
+<style>
+    .swatch-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .swatch {
+        margin: 0.15rem;
+        padding: 0.15rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 0.25rem solid rgba(0,0,0,0);
+    }
+    .swatch:hover {
+        border: 0.25rem solid #dadada;
+    }
+</style>
+<!-- <select 
     ng-options="color as color.name for color in $ctrl.colors"
     ng-model="$ctrl.selectedColor"
     ng-change="$ctrl.setColor()">
-</select>
+</select> -->
+<ul class="swatch-list">
+    <li ng-repeat="color in $ctrl.colors" ng-click="$ctrl.setColor(color)" class="swatch" style="background-color:{{color.patternId.fill}}"></li>
+</ul>

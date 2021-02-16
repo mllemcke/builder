@@ -62,13 +62,13 @@ function colorSelectorCtrl() {
         { name: "Vivid Shifter", patternId: {'fill': '#5A16A8'} },
     ];
 
-    ctrl.setColor = function(){
+    ctrl.setColor = function(color){
+        ctrl.selectedColor = color;
         ctrl.onUpdate({color: ctrl.selectedColor});
     }
 
     ctrl.$onInit = function () {
-        ctrl.selectedColor = ctrl.colors[0]; //default color
-        ctrl.setColor();
+        ctrl.setColor(ctrl.colors[0]); //default color
     }
 }
 
