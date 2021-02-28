@@ -1,8 +1,49 @@
+body {
+    font-family: "Merriweather", sans-serif;
+    margin: 0;
+}
+
+.banner {
+    padding: 0.5em 0;
+    min-width: 100%;
+    background: #b7b7b7;
+    margin-bottom: 1em;
+}
+
+.banner-home {
+    margin-left: 2em;
+}
+
+.banner img {
+    height: 4em;
+}
+
+.builder-container {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.svg-background {
+    background-color: rgb(172,173,155);
+    border-radius: 0.75em;
+    width: calc((85vh - 2em)*0.66);
+    max-height: 85vh;
+    padding: 0.5em;
+    margin: 0.5em 1.5em;
+}
+
+.option-banner {
+    color: #8E7356;
+}
+
 .color-selector-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20rem;
+    width: 20em;
+    margin-bottom: 1.25em;
 }
 
 .color-selector {
@@ -10,13 +51,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 3rem;
-    padding: 0.5rem 1.75rem;
+    height: 3em;
+    padding: 0.5em 1.75em;
     width: 100%;
     background: linear-gradient(0deg, #fefefe, #e1e1e1);
     border: 1px solid #e1e1e1;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 .color-selector:hover {
@@ -31,9 +72,9 @@
 
 .selected-color .swatch {
     display: inline-block;
-    height: 1rem;
-    width: 1rem;
-    margin-right: 0.75rem;
+    height: 1em;
+    width: 1em;
+    margin-right: 0.75em;
 }
 
 .swatch-list {
@@ -41,7 +82,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0.5rem;
+    padding: 0.5em;
     margin: 0;
     border-left: 1px #e1e1e1 solid;
     border-bottom: 1px #e1e1e1 solid;
@@ -51,25 +92,25 @@
 }
 
 .swatch {
-    margin: 0.15rem;
-    padding: 0.15rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 0.25rem solid rgba(0,0,0,0);
+    margin: 0.15em;
+    padding: 0.15em;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.25em solid rgba(0,0,0,0);
 }
 
 .swatch-list > .swatch:hover {
-    border: 0.25rem solid #dadada;
+    border: 0.25em solid #dadada;
 }
 
 .swatch > .color-tooltip {
     background: rgba(0,0,0,0.75);
     color: #fff;
     position: relative;
-    top: 1rem;
-    left: -2rem;
-    padding: 0 0.25rem;
-    border-radius: 0.25rem;
-    width: 5rem;
+    top: 1em;
+    left: -2em;
+    padding: 0 0.25em;
+    border-radius: 0.25em;
+    width: 5em;
     text-align: center;
 }
