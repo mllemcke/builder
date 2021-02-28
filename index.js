@@ -50,4 +50,7 @@ myApp.config(function($routeProvider) {
     $routeProvider.when('/cardigan', {
       template: '<cardigan></cardigan>'
     });
+    $routeProvider.when('/pants', {
+        template: '<pants></pants>'
+      });
   });
