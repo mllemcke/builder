@@ -4,18 +4,18 @@ body {
 }
 
 .banner {
-    padding: 0.5em 0;
+    padding: 0.5rem 0;
     min-width: 100%;
     background: #b7b7b7;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 .banner-home {
-    margin-left: 2em;
+    margin-left: 2rem;
 }
 
 .banner img {
-    height: 4em;
+    height: 4rem;
 }
 
 .builder-container {
@@ -27,24 +27,24 @@ body {
 
 .svg-background {
     background-color: rgb(172,173,155);
-    border-radius: 0.75em;
-    width: calc((85vh - 2em)*0.66);
+    border-radius: 0.75rem;
+    width: calc((85vh - 2rem)*0.66);
     max-height: 85vh;
-    padding: 0.5em;
-    margin: 0.5em 1.5em;
+    padding: 0.5rem;
+    margin: 0.5rem 1.5rem;
 }
 
 .option-banner {
     color: #8E7356;
-    margin-top: 0.10em;
+    margin-top: 0.10rem;
 }
 
 .color-selector-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20em;
-    margin-bottom: 1.25em;
+    width: 20rem;
+    margin-bottom: 1.25rem;
 }
 
 .color-selector {
@@ -52,13 +52,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 3em;
-    padding: 0.5em 1.75em;
+    height: 3rem;
+    padding: 0.5rem 1.75rem;
     width: 100%;
     background: #fefefe;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .color-selector:hover {
@@ -73,7 +73,7 @@ body {
 
 .selected-color .swatch {
     display: inline-block;
-    margin-right: 0.75em;
+    margin-right: 0.75rem;
 }
 
 .swatch-list {
@@ -81,7 +81,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0.5em;
+    padding: 0.5rem;
     margin: 0;
     border-left: 1px #e1e1e1 solid;
     border-bottom: 1px #e1e1e1 solid;
@@ -91,25 +91,25 @@ body {
 }
 
 .swatch {
-    margin: 0.15em;
-    padding: 0.15em;
-    width: 1.5em;
-    height: 1.5em;
-    border: 0.25em solid rgba(0,0,0,0);
+    margin: 0.15rem;
+    padding: 0.15rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.25rem solid rgba(0,0,0,0);
 }
 
 .swatch-list > .swatch:hover {
-    border: 0.25em solid #dadada;
+    border: 0.25rem solid #dadada;
 }
 
 .swatch > .color-tooltip {
     background: rgba(0,0,0,0.75);
     color: #fff;
     position: relative;
-    top: 1em;
-    left: -2em;
-    padding: 0 0.25em;
-    border-radius: 0.25em;
-    width: 5em;
+    top: 1rem;
+    left: -2rem;
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+    width: 5rem;
     text-align: center;
 }
