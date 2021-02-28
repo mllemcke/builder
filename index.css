@@ -54,14 +54,14 @@ body {
     height: 3em;
     padding: 0.5em 1.75em;
     width: 100%;
-    background: linear-gradient(0deg, #fefefe, #e1e1e1);
+    background: #fefefe;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     font-size: 1em;
 }
 
 .color-selector:hover {
-    background: linear-gradient(180deg, #fefefe, #e1e1e1);
+    background: #e1e1e1;
 }
 
 .selected-color {
@@ -72,8 +72,6 @@ body {
 
 .selected-color .swatch {
     display: inline-block;
-    height: 1em;
-    width: 1em;
     margin-right: 0.75em;
 }
 
