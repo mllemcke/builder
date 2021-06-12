@@ -48,9 +48,12 @@ myApp.controller('mainCtrl', ['$scope', function ($scope) {
 }]);
 myApp.config(function($routeProvider) {
     $routeProvider.when('/cardigan', {
-      template: '<cardigan></cardigan>'
+        template: '<cardigan></cardigan>'
     });
     $routeProvider.when('/pants', {
         template: '<pants></pants>'
-      });
+    });
+    $routeProvider.when('/', {
+        template: '<item-list></item-list>'
+    });
   });
