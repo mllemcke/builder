@@ -12,7 +12,7 @@ angular.module('bumbyApp')
                 },
                 {
                     title: "Sweater",
-                    link: "/cardigan",
+                    link: "/sweater",
                     image: "resources/Zipper-Henley-adult.jpg"
                 }
             ];

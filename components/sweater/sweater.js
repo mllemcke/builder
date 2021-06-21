@@ -1,6 +1,6 @@
 angular.module('bumbyApp')
-    .component('cardiganSvg', {
-        templateUrl: 'components/cardigan/cardigan-svg.html',
+    .component('sweaterSvg', {
+        templateUrl: 'components/sweater/sweater-svg.html',
         bindings: {
             selectedOptions: '='
         },
@@ -11,7 +11,7 @@ angular.module('bumbyApp')
             }
         }
     })
-    .component('cardigan', {
-        templateUrl: 'components/cardigan/cardigan.html',
+    .component('sweater', {
+        templateUrl: 'components/sweater/sweater.html',
         bindings: {}
     });
