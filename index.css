@@ -74,12 +74,12 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: calc(100% - 1.6em);
+    width: calc(100% - 1.3em);
     padding: 1rem;
     background: rgba(34,34,34, 0.7);
     border-bottom-left-radius:0.25rem;
     border-bottom-right-radius:0.25rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: rgba(255,255,255, 0.9);
     text-align: center;
