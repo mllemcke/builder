@@ -56,4 +56,7 @@ myApp.config(function($routeProvider) {
     $routeProvider.when('/', {
         template: '<item-list></item-list>'
     });
+    $routeProvider.when('/items/:itemId', {
+        template: '<item></item>'
+    });
   });
