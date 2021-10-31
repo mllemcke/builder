@@ -1,21 +1,22 @@
-<div class="builder-container">
+<div class="builder-container" ng-if="$ctrl.item">
     <div ng-include="$ctrl.svgUrl" class="svg-background"></div>
     <div>
-        <div>
-            <h1 class="option-banner">My Bumby {{$ctrl.item.title}}</h1>
-            <div ng-repeat="option in $ctrl.item.options">
-                <label>{{option.label}}</label>
-                <color-selector on-update="$ctrl.updateOptionColor($index, color)"></color-selector>
-            </div>
-            
-            <div ng-if="$ctrl.item.extras && $ctrl.item.extras.length > 0">
-                <!-- EXTRA OPTIONS -->
-                <h3 class="option-banner">Additional Options</h3>
-                <div ng-repeat="extra in $ctrl.item.extras">
-                    <label><input type="checkbox" ng-model="extra.show" ng-click="$ctrl.toggleExtraColorShow($index, extra)">{{extra.label}}</label>
-                    <color-selector ng-if="extra.show" on-update="$ctrl.updateExtraColor($index, color)"></color-selector>
-                </div>
+        <h1 class="option-banner">My Bumby {{$ctrl.item.title}}</h1>
+        <div ng-repeat="option in $ctrl.item.options">
+            <label>{{option.label}}</label>
+            <color-selector on-update="$ctrl.updateOptionColor($index, color)"></color-selector>
+        </div>
+        
+        <div ng-if="$ctrl.item.extras && $ctrl.item.extras.length > 0">
+            <!-- EXTRA OPTIONS -->
+            <h3 class="option-banner">Additional Options</h3>
+            <div ng-repeat="extra in $ctrl.item.extras">
+                <label><input type="checkbox" ng-model="extra.show" ng-click="$ctrl.toggleExtraColorShow($index, extra)">{{extra.label}}</label>
+                <color-selector ng-if="extra.show" on-update="$ctrl.updateExtraColor($index, color)"></color-selector>
             </div>
         </div>
     </div>
+  </div>
+  <div class="builder-container" ng-if="!$ctrl.item">
+      <h1>Oops.. that item wasn't found</h1>
   </div>

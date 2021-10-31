@@ -3,7 +3,7 @@ angular.module('bumbyApp')
         return [
             {
                 title: "Pants",
-                link: "/pants",
+                link: "/items/pants",
                 image: "resources/pants.jpg",
                 options: [
                     { label: "Waistband" },
@@ -14,7 +14,7 @@ angular.module('bumbyApp')
             },
             {
                 title: "Sweater",
-                link: "/sweater",
+                link: "/items/sweater",
                 image: "resources/Zipper-Henley-adult.jpg",
                 options: [
                     { label: "Main Body" },

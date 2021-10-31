@@ -2,19 +2,9 @@ angular.module('bumbyApp')
     .component('itemList', {
         templateUrl: 'components/itemlist/itemlist.html',
         bindings: {},
-        controller: function () {
+        controller: ['itemData',
+        function ItemListController(itemData) {
             var ctrl = this;
-            ctrl.items = [
-                {
-                    title: "Pants",
-                    link: "/pants",
-                    image: "resources/pants.jpg"
-                },
-                {
-                    title: "Sweater",
-                    link: "/sweater",
-                    image: "resources/Zipper-Henley-adult.jpg"
-                }
-            ];
-        }
+            ctrl.items = itemData;
+        }]
     })
