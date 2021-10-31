@@ -2,29 +2,19 @@
     <div ng-include="$ctrl.svgUrl" class="svg-background"></div>
     <div>
         <div>
-            <h1 class="option-banner">My Bumby {{$ctrl.itemId}}</h1>
-            <div>
-                <label>Main Body</label>
-                <color-selector on-update="$ctrl.selectedOptions.colorOption1 = color"></color-selector>
-            </div>
-            <div>
-                <label>Collar</label>
-                <color-selector on-update="$ctrl.selectedOptions.colorOption2 = color"></color-selector>
-            </div>
-            <div>
-                <label>Sleeves</label>
-                <color-selector on-update="$ctrl.selectedOptions.colorOption3 = color"></color-selector>
+            <h1 class="option-banner">My Bumby {{$ctrl.item.title}}</h1>
+            <div ng-repeat="option in $ctrl.item.options">
+                <label>{{option.label}}</label>
+                <color-selector on-update="$ctrl.updateOptionColor($index, color)"></color-selector>
             </div>
             
+            <div ng-if="$ctrl.item.extras && $ctrl.item.extras.length > 0">
                 <!-- EXTRA OPTIONS -->
-            <h3 class="option-banner">Additional Options</h3>
-            <div>
-                <label><input type="checkbox" ng-model="selectedOptions.extras.option1.show"> Add Sleeve Cuffs</label>
-                <color-selector ng-if="selectedOptions.extras.option1.show" on-update="selectedOptions.extras.option1.color = color"></color-selector>
-            </div>
-            <div>
-                <label><input type="checkbox" ng-model="selectedOptions.extras.option2.show"> Add Center Pocket</label>
-                <color-selector ng-if="selectedOptions.extras.option2.show" on-update="selectedOptions.extras.option2.color = color"></color-selector>
+                <h3 class="option-banner">Additional Options</h3>
+                <div ng-repeat="extra in $ctrl.item.extras">
+                    <label><input type="checkbox" ng-model="extra.show" ng-click="$ctrl.toggleExtraColorShow($index, extra)">{{extra.label}}</label>
+                    <color-selector ng-if="extra.show" on-update="$ctrl.updateExtraColor($index, color)"></color-selector>
+                </div>
             </div>
         </div>
     </div>
